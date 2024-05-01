@@ -26,7 +26,6 @@ export default {
 };
 
 function getSSLValues() {
-  console.log(process.env);
   if (process.env.POSTGRES_CA) {
     return {
       ca: process.env.POSTGRES_CA,
