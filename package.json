@@ -4,7 +4,7 @@
   "description": "Implementação do https://www.tabnews.com.br/ para o curso https://curso.dev",
   "main": "index.js",
   "scripts": {
-    "dev": "trap \"echo && echo 👋😁 Bye...\n\" INT TERM && next dev",
+    "dev": "trap \"echo && echo 👋😁 Bye...\n\" INT TERM && npm run services:up && npm run services:wait:database && npm run migrations:up && next dev",
     "postdev": "npm run services:stop",
     "test": "npm run services:up && concurrently --n next,jest --hide next -k -s command-jest \"next dev\" \"jest --runInBand --verbose\"",
     "posttest": "npm run services:stop",
