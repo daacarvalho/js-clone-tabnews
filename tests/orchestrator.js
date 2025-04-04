@@ -32,7 +32,7 @@ async function runPendingMigrations() {
 const orchestrator = {
   waitForAllServices,
   clearDataBase,
-  runPendingMigrations
+  runPendingMigrations,
 };
 
 export default orchestrator;

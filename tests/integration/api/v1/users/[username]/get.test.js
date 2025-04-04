@@ -1,4 +1,3 @@
-import orchestrator from "tests/orchestrator.js";
 import { version as uuidVersion } from "uuid";
 
 beforeAll(async () => {});
