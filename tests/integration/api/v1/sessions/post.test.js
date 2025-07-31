@@ -12,10 +12,6 @@ beforeAll(async () => {
 describe("POST /api/v1/sessions", () => {
   describe("Anonymus user", () => {
     test("With incorrect `email` but correct `password`", async () => {
-      const userCriado = await orchestrator.createUser({
-        password: "senha-correta",
-      });
-
       const response = await fetch("http://localhost:3000/api/v1/sessions", {
         method: "POST",
         headers: {
