@@ -210,8 +210,6 @@ describe("PATCH /api/v1/users/[username]", () => {
       const responseBodyDuplicatedUserName =
         await responseWithDuplicatedUserName.json();
 
-      console.log(responseBodyDuplicatedUserName);
-
       expect(responseBodyDuplicatedUserName).toEqual({
         id: responseBodyDuplicatedUserName.id,
         username: `${userToUpdatePassword.username}`,
