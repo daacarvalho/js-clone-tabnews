@@ -30,7 +30,7 @@ describe("Use case: Registration Flow (all successful)", () => {
         id: responseBody.id,
         username: "daacarvalho",
         email: "danielfccarvalho@hotmail.com",
-        features: [],
+        features: ["read:activation_token"],
         password: responseBody.password,
         created_at: responseBody.created_at,
         updated_at: responseBody.updated_at,
@@ -52,5 +52,5 @@ describe("Use case: Registration Flow (all successful)", () => {
     test("Get user information", async () => {
         
     })
-    
+
 });
