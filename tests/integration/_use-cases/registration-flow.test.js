@@ -37,8 +37,12 @@ describe("Use case: Registration Flow (all successful)", () => {
       });
     });
 
-    test("Receive activation email", async () => {
-
+    test.skip("Receive activation email", async () => {
+      const lastEmail = await orchestrator.getLastEmail();
+      expect(lastEmail.send).toBe("danielfccarvalho@hotmail.com");
+      expect(lastEmail.recipients[0]).toBe("danielfccarvalho@hotmail.com");
+      expect(lastEmail.subject).toBe("Ative seu cadastro no Clone Fin Tab");
+      expect(lastEmail.text).toContain("daacarvalho");
     });
 
     test("Activate user account", async () => {
